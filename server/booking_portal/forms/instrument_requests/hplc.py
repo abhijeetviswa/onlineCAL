@@ -1,10 +1,11 @@
 from django import forms
 
-from ..models.instrument.form_models import HPLC
-from .userform import UserDetailsForm, UserRemarkForm
+from booking_portal.models.instrument.requests import HPLC
+
+from .base import Form, UserRemarkForm
 
 
-class HPLCForm(UserDetailsForm, UserRemarkForm):
+class HPLCForm(Form, UserRemarkForm):
     title = "HPLC-Shimadzu"
     subtitle = "HPLC-Shimadzu UFLC"
     help_text = '''
